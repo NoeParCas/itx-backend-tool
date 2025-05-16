@@ -20,3 +20,20 @@ stop:
 
 lint:
 	docker compose exec $(CONTAINER) npm run lint
+
+generate-migration:
+	docker compose exec $(CONTAINER) ./node_modules/db-migrate/bin/db-migrate \
+	--config ./src/Itx/Infrastructure/Persistence/Postgres/database.json \
+	-e docker create $(migrationName) -m ./src/Itx/Infrastructure/Persistence/Postgres/Migrations \
+	--sql-file -v
+
+run-migrations:
+	docker compose exec $(CONTAINER) ./node_modules/db-migrate/bin/db-migrate \
+	--config ./src/Itx/Infrastructure/Persistence/Postgres/database.json \
+	-e docker up -m ./src/Itx/Infrastructure/Persistence/Postgres/Migrations -v
+
+revert-all-migrations:
+	docker compose exec $(CONTAINER) ./node_modules/db-migrate/bin/db-migrate \
+	--config ./src/Itx/Infrastructure/Persistence/Postgres/database.json \
+	-e docker reset -m ./src/Itx/Infrastructure/Persistence/Postgres/Migrations -v
+
