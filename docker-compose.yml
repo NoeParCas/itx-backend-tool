@@ -1,0 +1,16 @@
+services:
+  itx-backend-tool-api:
+    build:
+      target: dev
+      context: .
+      args:
+        - test=false
+    command: npm run dev:start:itx-backend-tool-api
+    volumes:
+      - .:/app
+      - /app/node_modules/
+    ports:
+      - "5001:5001"
+      - "9230:9230"
+    environment:
+      - PORT=5001

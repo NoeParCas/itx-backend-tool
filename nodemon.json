@@ -1,0 +1,10 @@
+{
+  "watch": [
+    "./src"
+  ],
+  "delay": 5000,
+  "legacyWatch": true,
+  "execMap": {
+    "ts": "node --require ts-node/register/transpile-only"
+  }
+}
