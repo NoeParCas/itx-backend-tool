@@ -1,0 +1,22 @@
+services:
+
+  Apps.Factory.PostgresClient:
+    factory:
+      class: ../Factory/PostgresClientFactory
+      method: 'createConnection'
+    arguments: 
+      - '%env(POSTGRES_DB)%'
+      - '%env(POSTGRES_USER)%'
+      - '%env(POSTGRES_PASSWORD)%'
+      - '%env(POSTGRES_PORT)%'
+      - '%env(POSTGRES_HOST)%'
+
+  Apps.Finder.ProductFinder:
+    class: ../Query/PostgresProductFinder
+    arguments:
+      - '@Apps.Factory.PostgresClient'
+
+  Apps.Controller.ListedProductsController:
+    class: ../Controllers/ListedProductsController
+    arguments:
+      - '@Apps.Finder.ProductFinder'
