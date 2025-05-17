@@ -25,8 +25,9 @@ export default class PostgresProductFinder implements ProductFinder {
 
 	async findAll(): Promise<ProductView[]> {
 		const query = await this.findAllQuery()
-		console.log('Query result', query)
+
 		if (query.length === 0) {
+			console.error('Products not found')
 			throw new Error('Products not found')
 		}
 
@@ -47,7 +48,6 @@ export default class PostgresProductFinder implements ProductFinder {
 	}
 
 private async findAllQuery() {
-	console.log('Finding all products')
 	return this.postgresClient(PRODUCT_TABLE)
 		.select(
 			`${PRODUCT_TABLE}.id`, 

@@ -17,7 +17,7 @@ export default class ProductListService {
 
 			return initialMap
 		})
-		console.log('PRODUCTS PONDERATION MAP', productsPonderationMap[0])
+
 		return this.sortMapByIntegerKeyDescending(productsPonderationMap[0])
 	}
 
@@ -40,8 +40,7 @@ export default class ProductListService {
 		})
 
 		const sortedProducts = entries.map(entry => entry[1])
-		console.log('SORTED PRODUCTS', sortedProducts)
+
 		return sortedProducts
 	}
-	
 }

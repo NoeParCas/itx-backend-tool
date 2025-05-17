@@ -1,0 +1,116 @@
+[
+	{
+		"id": 5,
+		"name": "CONTRASTING LACE T-SHIRT",
+		"sales": 650,
+		"sizeStock": [
+			{
+				"size": "S",
+				"stock": 0
+			},
+			{
+				"size": "M",
+				"stock": 1
+			},
+			{
+				"size": "L",
+				"stock": 0
+			}
+		]
+	},
+	{
+		"id": 1,
+		"name": "V-NECH BASIC SHIRT",
+		"sales": 100,
+		"sizeStock": [
+			{
+				"size": "S",
+				"stock": 4
+			},
+			{
+				"size": "M",
+				"stock": 9
+			},
+			{
+				"size": "L",
+				"stock": 0
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "RAISED PRINT T-SHIRT",
+		"sales": 80,
+		"sizeStock": [
+			{
+				"size": "S",
+				"stock": 20
+			},
+			{
+				"size": "M",
+				"stock": 2
+			},
+			{
+				"size": "L",
+				"stock": 20
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "CONTRASTING FABRIC T-SHIRT",
+		"sales": 50,
+		"sizeStock": [
+			{
+				"size": "S",
+				"stock": 35
+			},
+			{
+				"size": "M",
+				"stock": 9
+			},
+			{
+				"size": "L",
+				"stock": 9
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "SLOGAN T-SHIRT",
+		"sales": 20,
+		"sizeStock": [
+			{
+				"size": "S",
+				"stock": 9
+			},
+			{
+				"size": "M",
+				"stock": 2
+			},
+			{
+				"size": "L",
+				"stock": 5
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "PLEATED T-SHIRT",
+		"sales": 3,
+		"sizeStock": [
+			{
+				"size": "S",
+				"stock": 25
+			},
+			{
+				"size": "M",
+				"stock": 30
+			},
+			{
+				"size": "L",
+				"stock": 10
+			}
+		]
+	}
+]

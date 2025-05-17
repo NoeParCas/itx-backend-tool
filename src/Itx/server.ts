@@ -13,7 +13,7 @@ app.get('/status', (req: Request, res: Response) => res.status(200).send('All up
 
 app.post('/v1/listed-products', async (req: Request, res: Response) => {
   const listedProductsController = (await container).get('Apps.Controller.ListedProductsController')
-  
+
   await listedProductsController.run(req, res)
 })
 

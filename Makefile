@@ -21,6 +21,9 @@ stop:
 lint:
 	docker compose exec $(CONTAINER) npm run lint
 
+feature-test:
+	docker compose exec $(CONTAINER) npm run test:feature:itxBackendToolApi
+
 generate-migration:
 	docker compose exec $(CONTAINER) ./node_modules/db-migrate/bin/db-migrate \
 	--config ./src/Itx/Infrastructure/Persistence/Postgres/database.json \
