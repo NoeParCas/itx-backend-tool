@@ -6,14 +6,15 @@ envConfig()
 const app = express()
 const port = process.env.PORT || 5001
 const container = loadContainer()
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 app.get('/status', (req: Request, res: Response) => res.status(200).send('All up and running'))
 
-app.get('/v1/listed-products', async (req: Request, res: Response) => {
+app.post('/v1/listed-products', async (req: Request, res: Response) => {
   const listedProductsController = (await container).get('Apps.Controller.ListedProductsController')
-  const allProducts = await listedProductsController.run(req, res)
-
-  res.status(200).send(allProducts)
+  
+  await listedProductsController.run(req, res)
 })
 
 app.listen(port, () => {

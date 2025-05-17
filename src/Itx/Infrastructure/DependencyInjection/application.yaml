@@ -19,4 +19,13 @@ services:
   Apps.Controller.ListedProductsController:
     class: ../Controllers/ListedProductsController
     arguments:
+      - '@Apps.Query.ListedProductsQueryHandler'
+
+  Apps.Query.ListedProductsQueryHandler:
+    class: ../../Application/Query/ListedProductsQueryHandler
+    arguments:
       - '@Apps.Finder.ProductFinder'
+      - '@Apps.Service.ProductListService'
+
+  Apps.Service.ProductListService:
+    class: ../../Application/Service/ProductListService
