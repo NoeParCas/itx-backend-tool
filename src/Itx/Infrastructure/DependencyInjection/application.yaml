@@ -27,5 +27,16 @@ services:
       - '@Apps.Finder.ProductFinder'
       - '@Apps.Service.ProductListService'
 
+  Apps.Scoring.SalesScoreStrategy:
+    class: ../../Application/Service/SalesScoreStrategy
+    tags: 
+      - { name: 'score.strategy'}
+
+  Apps.Scoring.SizeStockScoreStrategy:
+    class: ../../Application/Service/SizeStockScoreStrategy
+    tags: 
+      - { name: 'score.strategy'}
+
   Apps.Service.ProductListService:
     class: ../../Application/Service/ProductListService
+    arguments: ["!tagged score.strategy"]

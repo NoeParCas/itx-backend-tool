@@ -10,6 +10,7 @@ export default class ListedProductsController implements Controller {
 	) {}
 	
 	async run(req: Request, res: Response) {
+		this.validateRequestBodyValues(req.body)
 		const { salesUnit, stockRatio } = req.body
 
 		try {
@@ -21,4 +22,18 @@ export default class ListedProductsController implements Controller {
 			res.status(500).json({ error: 'Internal Server Error' })
 		}
 	}
+
+	private validateRequestBodyValues(body: object) {
+		const values = Object.values(body)
+	
+		const sum = values.reduce((acc: number, value) => {
+			return acc + (value as number)
+		}, 0)
+
+		if (sum !== 1) {
+			throw new Error('The sum of all weights must be equal to 1.')
+		}
+	}
 }
+
+

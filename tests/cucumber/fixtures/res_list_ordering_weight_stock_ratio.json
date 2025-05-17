@@ -19,25 +19,6 @@
 		]
 	},
 	{
-		"id": 2,
-		"name": "CONTRASTING FABRIC T-SHIRT",
-		"sales": 50,
-		"sizeStock": [
-			{
-				"size": "S",
-				"stock": 35
-			},
-			{
-				"size": "M",
-				"stock": 9
-			},
-			{
-				"size": "L",
-				"stock": 9
-			}
-		]
-	},
-	{
 		"id": 3,
 		"name": "RAISED PRINT T-SHIRT",
 		"sales": 80,
@@ -53,6 +34,25 @@
 			{
 				"size": "L",
 				"stock": 20
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "CONTRASTING FABRIC T-SHIRT",
+		"sales": 50,
+		"sizeStock": [
+			{
+				"size": "S",
+				"stock": 35
+			},
+			{
+				"size": "M",
+				"stock": 9
+			},
+			{
+				"size": "L",
+				"stock": 9
 			}
 		]
 	},
