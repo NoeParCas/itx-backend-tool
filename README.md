@@ -65,6 +65,15 @@ The project follows the CQRS for clear separation of concerns:
     - Create the schema and tables
     - Insert the inital challenge data into the database
 
+The database structure follows this design:
+
+![database-tables](docs/database_tables.png)
+
+### Diagram flow
+On the attached image you will find a diagram flow with the whole functionality.
+
+![diagram-flow](docs/diagram_flow.png)
+
 ## 🧪 Testing
 The frameworks used for testing were:
 * Cucumber: for testing the whole feature.
