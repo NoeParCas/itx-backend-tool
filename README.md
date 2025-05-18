@@ -18,7 +18,6 @@ make run-migrations
 ```
 (Optional) Install dependencies if needed:
 If dependencies are not installed properly, run:
-
 ```bash
 make install
 ```
@@ -29,6 +28,9 @@ Once the app is up and running, it will be available on port `5001`.
 
 ## 🛑 Stop app
 To stop the app and clean up Docker images please run:
+```bash
+make revert-all-migrations
+```
 
 ```bash
 make stop
@@ -39,7 +41,6 @@ make clean
 ```
 
 ## 🧠 Solution design
-
 * Language: TypeScript
 * Architecture: RESTful API using CQRS (Command Query Responsability Segregation)
 
@@ -63,3 +64,30 @@ The project follows the CQRS for clear separation of concerns:
 * After starting the application, all existing migrations are run to:
     - Create the schema and tables
     - Insert the inital challenge data into the database
+
+## 🧪 Testing
+The frameworks used for testing were:
+* Cucumber: for testing the whole feature.
+* Jest: unit-test 
+
+For executing the test please run:
+
+### 🎯 unit-test 
+```bash
+make unit-test
+```
+
+### 🎬 feature-test 
+```bash
+make feature-test
+```
+
+Please be aware that the execution of migrations is required for both the successful completion of feature tests and the correct operation of the application. For executing migrations please run:
+
+### 🛠 Run database migrations
+```bash
+make run-migrations
+```
+
+## 📖 Documentation
+API documentation is located in the `docs` directory. There you can find more detailed information about the endpoint `docs/itx-backend-tool-api.yaml`.

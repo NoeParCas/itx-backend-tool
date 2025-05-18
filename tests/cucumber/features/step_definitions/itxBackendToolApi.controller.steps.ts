@@ -32,7 +32,7 @@ Then('the response status code should be {int}', async(status) => {
 })
 
 BeforeAll(async () => {
-  app.post('/v1/listed-products', async (req, res) => {
+  app.post('/v1/products/sort-order', async (req, res) => {
     const controller = (await container).get('Apps.Controller.ListedProductsController')
 
     await controller.run(req, res)
