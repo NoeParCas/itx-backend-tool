@@ -1,0 +1,14 @@
+5f50aafd6b2c824c46ce0788ad40e228
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const NotFoundError_1 = __importDefault(require("./NotFoundError"));
+class ProductNotFoundException extends NotFoundError_1.default {
+    constructor() {
+        super('No products found. Please check the database connection, if migrations were executed or the query.');
+    }
+}
+exports.default = ProductNotFoundException;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL1VzZXJzL25vZWxpYXBhcmFkYWNhc3Ryby9pdHgtYmFja2VuZC10b29sL3NyYy9JdHgvRG9tYWluL0V4Y2VwdGlvbnMvUHJvZHVjdE5vdEZvdW5kRXhjZXB0aW9uLnRzIiwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsb0VBQTJDO0FBRTNDLE1BQXFCLHdCQUF5QixTQUFRLHVCQUFhO0lBQ2xFO1FBQ0MsS0FBSyxDQUFDLG9HQUFvRyxDQUFDLENBQUE7SUFDNUcsQ0FBQztDQUNEO0FBSkQsMkNBSUMiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL1VzZXJzL25vZWxpYXBhcmFkYWNhc3Ryby9pdHgtYmFja2VuZC10b29sL3NyYy9JdHgvRG9tYWluL0V4Y2VwdGlvbnMvUHJvZHVjdE5vdEZvdW5kRXhjZXB0aW9uLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBOb3RGb3VuZEVycm9yIGZyb20gJy4vTm90Rm91bmRFcnJvcidcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgUHJvZHVjdE5vdEZvdW5kRXhjZXB0aW9uIGV4dGVuZHMgTm90Rm91bmRFcnJvciB7XG5cdHB1YmxpYyBjb25zdHJ1Y3RvcigpIHtcblx0XHRzdXBlcignTm8gcHJvZHVjdHMgZm91bmQuIFBsZWFzZSBjaGVjayB0aGUgZGF0YWJhc2UgY29ubmVjdGlvbiwgaWYgbWlncmF0aW9ucyB3ZXJlIGV4ZWN1dGVkIG9yIHRoZSBxdWVyeS4nKVxuXHR9XG59XG4iXSwidmVyc2lvbiI6M30=

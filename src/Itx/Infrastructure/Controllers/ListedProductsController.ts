@@ -5,6 +5,9 @@ import { SortWeightQuery } from '../../Application/Query/SortWeightQuery'
 import { Request, Response } from 'express'
 import Joi from 'joi'
 import { ValidatorService } from '../../Application/Service/ValidatorService'
+import NotFoundError from '../../Domain/Exceptions/NotFoundError'
+import InvalidWeightValueException from '../../Domain/Exceptions/InvalidWeightValueException'
+import { InvalidValueException } from '../../Domain/Exceptions/InvalidValueException'
 
 export default class ListedProductsController implements Controller {
 	constructor(
@@ -23,9 +26,13 @@ export default class ListedProductsController implements Controller {
 
 			res.status(200).json(products)
 		} catch (error) {
-			if (error instanceof Joi.ValidationError) {
+			if (error instanceof Joi.ValidationError || error instanceof InvalidValueException) {
 				return res.status(400).json({ error: error.message })
 			}
+			if (error instanceof NotFoundError) {
+				return res.status(404).json({ error: error.message })
+			}
+
 			console.error('Error in ListedProductsController:', error)
 			res.status(500).json({ error: 'Internal Server Error' })
 		}
@@ -55,7 +62,7 @@ export default class ListedProductsController implements Controller {
 		}, 0)
 
 		if (sum !== 1) {
-			throw new Error('The sum of all weights must be equal to 1.')
+			throw new InvalidWeightValueException(body)
 		}
 	}
 }

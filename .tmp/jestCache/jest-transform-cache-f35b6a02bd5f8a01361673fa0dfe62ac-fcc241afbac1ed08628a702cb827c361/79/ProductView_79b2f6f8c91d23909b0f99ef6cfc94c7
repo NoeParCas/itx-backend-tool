@@ -1,0 +1,13 @@
+91db98d9ec295a8990572ab234aaafdc
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class ProductView {
+    constructor(id, name, sales, sizeStock) {
+        this.id = id;
+        this.name = name;
+        this.sales = sales;
+        this.sizeStock = sizeStock;
+    }
+}
+exports.default = ProductView;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL1VzZXJzL25vZWxpYXBhcmFkYWNhc3Ryby9pdHgtYmFja2VuZC10b29sL3NyYy9JdHgvQXBwbGljYXRpb24vUXVlcnkvVmlldy9Qcm9kdWN0Vmlldy50cyIsIm1hcHBpbmdzIjoiOztBQUVBLE1BQXFCLFdBQVc7SUFDL0IsWUFDVSxFQUFVLEVBQ1YsSUFBWSxFQUNaLEtBQWEsRUFDYixTQUEwQjtRQUgxQixPQUFFLEdBQUYsRUFBRSxDQUFRO1FBQ1YsU0FBSSxHQUFKLElBQUksQ0FBUTtRQUNaLFVBQUssR0FBTCxLQUFLLENBQVE7UUFDYixjQUFTLEdBQVQsU0FBUyxDQUFpQjtJQUNqQyxDQUFDO0NBQ0o7QUFQRCw4QkFPQyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvVXNlcnMvbm9lbGlhcGFyYWRhY2FzdHJvL2l0eC1iYWNrZW5kLXRvb2wvc3JjL0l0eC9BcHBsaWNhdGlvbi9RdWVyeS9WaWV3L1Byb2R1Y3RWaWV3LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBTaXplU3RvY2tWaWV3IGZyb20gJy4vU2l6ZVN0b2NrVmlldydcblxuZXhwb3J0IGRlZmF1bHQgY2xhc3MgUHJvZHVjdFZpZXcge1xuXHRjb25zdHJ1Y3Rvcihcblx0XHRyZWFkb25seSBpZDogbnVtYmVyLCBcblx0XHRyZWFkb25seSBuYW1lOiBzdHJpbmcsIFxuXHRcdHJlYWRvbmx5IHNhbGVzOiBudW1iZXIsXG5cdFx0cmVhZG9ubHkgc2l6ZVN0b2NrOiBTaXplU3RvY2tWaWV3W11cblx0KSB7fVxufVxuIl0sInZlcnNpb24iOjN9

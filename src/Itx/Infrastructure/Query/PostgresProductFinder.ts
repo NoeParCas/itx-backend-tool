@@ -2,6 +2,7 @@ import { Knex } from 'knex'
 import { ProductFinder } from '../../Application/Query/Finder/ProductFinder'
 import SizeStockView from '../../Application/Query/View/SizeStockView'
 import ProductView from '../../Application/Query/View/ProductView'
+import ProductNotFoundException from '../../Domain/Exceptions/ProductNotFoundException'
 
 const SCHEMA = 'itx'
 const PRODUCT_TABLE = 'product'
@@ -12,7 +13,7 @@ type LatestStockType = {
 		size: string
 		stock: number
 	}
-type ProductQueryType = {
+export type ProductQueryType = {
 	id: number
 	name: string
 	latest_sales: number
@@ -27,8 +28,7 @@ export default class PostgresProductFinder implements ProductFinder {
 		const query = await this.findAllQuery()
 
 		if (query.length === 0) {
-			console.error('Products not found')
-			throw new Error('Products not found')
+			throw new ProductNotFoundException()
 		}
 
 		const products = query.map((product:ProductQueryType ) => {
@@ -47,7 +47,7 @@ export default class PostgresProductFinder implements ProductFinder {
 		return products
 	}
 
-private async findAllQuery() {
+async findAllQuery(): Promise<ProductQueryType[]> {
 	return this.postgresClient(PRODUCT_TABLE)
 		.select(
 			`${PRODUCT_TABLE}.id`, 

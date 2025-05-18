@@ -1,0 +1,13 @@
+export const PRODUCT_ID = 1
+export const PRODUCT_NAME = 'Product 1'
+export const PRODUCT_UNIT_SALES = 10
+export const SIZE_S = 'S'
+export const SIZE_M = 'M'
+export const SIZE_L = 'L'
+export const RANDOM_SIZE_STOCK = 5
+export const RANDOM_SIZE_STOCK_2 = 3
+export const RANDOM_SIZE_STOCK_3 = 2
+export const RANDOM_SIZE_STOCK_4 = 0
+export const ANY_OTHER_PRODUCT_ID = 2
+export const ANY_OTHER_PRODUCT_NAME = 'Product 2'
+export const ANY_OTHER_PRODUCT_UNIT_SALES = 20
