@@ -1,1 +1,0 @@
-{"file":"/Users/noeliaparadacastro/itx-backend-tool/src/Itx/Domain/Exceptions/NotFoundError.ts","mappings":";;AAAA,MAAqB,aAAc,SAAQ,KAAK;CAAG;AAAnD,gCAAmD","names":[],"sources":["/Users/noeliaparadacastro/itx-backend-tool/src/Itx/Domain/Exceptions/NotFoundError.ts"],"sourcesContent":["export default class NotFoundError extends Error {}\n"],"version":3}
