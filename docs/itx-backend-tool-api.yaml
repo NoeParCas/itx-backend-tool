@@ -49,6 +49,8 @@ paths:
                   $ref: '#/components/schemas/ProductView'
         '400':
           description: Bad request.
+        '404':
+          description: Products not found.
         '500':
           description: Internal server error.
 components:
@@ -74,7 +76,6 @@ components:
       properties:
         id:
           type: integer
-          format: int64
           description: Unique identifier of the product.
         name:
           type: string

@@ -3,7 +3,10 @@ import { SortWeightQuery } from '../Query/SortWeightQuery'
 import ScoreStrategy from './ScoreStrategy'
 
 export default class ProductListService {
-	constructor(private readonly scoringStrategies: ScoreStrategy[]) {}
+	constructor(
+		private readonly scoringStrategies: ScoreStrategy[]
+	) {}
+	
 	listProducts(products: ProductView[], weights: SortWeightQuery): ProductView[] {
 		const productScores = products.map((product) => {
 			const totalScore = this.calculateTotalScore(product, weights)
